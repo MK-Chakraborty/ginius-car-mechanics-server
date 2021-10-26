@@ -6,7 +6,7 @@ const cors = require('cors');
 require('dotenv').config()
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors());
@@ -58,12 +58,6 @@ async function run() {
 }
 
 run().catch(console.dir);
-
-// client.connect(err => {
-//   const collection = client.db("test").collection("devices");
-//   // perform actions on the collection object
-//   client.close();
-// });
 
 
 app.get('/', (req, res) => {
