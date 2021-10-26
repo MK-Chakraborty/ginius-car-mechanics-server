@@ -64,6 +64,10 @@ app.get('/', (req, res) => {
     res.send('Hello Ginius Car Mechanics');
 })
 
+app.get('/hello', (req, res) => {
+    res.send('hello route for testing');
+})
+
 
 app.listen(port, () => {
     console.log('Lisitening to: ', port);
